@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU' crossorigin='anonymous'>
+</head>
+<body>
+    <!-- Hide with opacity and reveal with onclick -->
+    <div class="container" style="width:50%; float:left">
+        <h2>Solution:</h2>
+        {% for row in solutions %}
+            <div class="row">
+            {% for num in row %}
+                <div class="col-sm-1" style="border: 1px solid black">
+                    {{ num }}
+                </div>
+            {% endfor %}
+            </div>
+        {% endfor %} 
+    </div>
+    <button class="btn btn-primary" onclick="">Step-by-Step</button>
+    <a href="/sudoku" class="btn btn-primary">Start Board</a>
+</body>
+</html>
